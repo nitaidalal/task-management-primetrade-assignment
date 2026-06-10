@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Nitai Dalal",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-validator": "^7.3.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.7.0",
+    "morgan": "^1.11.0",
+    "swagger-jsdoc": "^6.3.0",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
