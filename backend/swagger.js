@@ -25,6 +25,10 @@ const options = {
         name: "Tasks",
         description: "CRUD operations on tasks — admin sees all, user sees own",
       },
+      {
+        name: "Admin",
+        description: "Admin only — manage all tasks and users across platform",
+      },
     ],
     components: {
       securitySchemes: {
