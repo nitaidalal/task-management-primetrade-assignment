@@ -3,8 +3,7 @@ import {
   register,
   login,
   logout,
-  getMe,
-  getAllUsers
+  getMe
 } from "../controllers/authController.js";
 import {
   registerValidation,
@@ -107,20 +106,6 @@ router.post("/logout", protect, logout);
  */
 router.get("/me", protect, getMe);
 
-/**
- * @swagger
- * /api/v1/auth/users:
- *   get:
- *     summary: Get all users (admin only)
- *     tags: [Auth]
- *     security:
- *       - cookieAuth: []
- *     responses:
- *       200:
- *         description: List of all users
- *       403:
- *         description: Admin only
- */
-router.get("/users", protect, getAllUsers);
+
 
 export default router;

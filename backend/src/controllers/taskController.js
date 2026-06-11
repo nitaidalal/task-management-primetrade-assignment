@@ -24,12 +24,10 @@ export const createTask = asyncHandler(async (req, res) => {
 // @desc    Get all tasks
 // @route   GET /api/v1/tasks
 // @access  Private
-// Admin gets all tasks, user gets only their own
 export const getTasks = asyncHandler(async (req, res) => {
   const { search, page = 1, limit = 10 } = req.query;
 
-  // Base filter — admin sees all, user sees own
-  const filter = req.user.role === "admin" ? {} : { createdBy: req.user._id };
+  const filter = { createdBy: req.user._id };
 
   
   if (search) {
@@ -48,10 +46,6 @@ export const getTasks = asyncHandler(async (req, res) => {
     .sort({ createdAt: -1 })
     .skip(skip)
     .limit(Number(limitNumber));
-
-  if (req.user.role === "admin") {
-    query.populate("createdBy", "name email");
-  }
 
   const tasks = await query;
   const total = await Task.countDocuments(filter);
