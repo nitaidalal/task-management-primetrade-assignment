@@ -52,7 +52,7 @@ router.post("/", createTaskValidation, validateRequest, createTask);
  * @swagger
  * /api/v1/tasks:
  *   get:
- *     summary: Get tasks — admin gets all, user gets own
+ *     summary: Get tasks — user/admin gets own
  *     tags: [Tasks]
  *     security:
  *       - cookieAuth: []

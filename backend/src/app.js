@@ -5,6 +5,7 @@ import morgan from "morgan";
 
 import authRoutes from "./routes/authRoutes.js";
 import taskRoutes from "./routes/taskRoutes.js";
+import adminRoutes from "./routes/adminRoutes.js";
 import { errorHandler } from "./middleware/errorMiddleware.js";
 import { swaggerUi, swaggerSpec } from "../swagger.js";
 
@@ -52,6 +53,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // Routes
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/tasks", taskRoutes);
+app.use("/api/v1/admin", adminRoutes);
 
 // Health check
 app.get("/", (req, res) => {
