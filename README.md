@@ -3,6 +3,11 @@
 A secure, full-stack task management app with JWT authentication and role-based access control.
 
 ---
+## 🚀 Live Demo
+
+🔗 **Live Application:** [Task Manager](https://task-management-nitai.vercel.app/)
+
+---
 ## Project Structure
 
 ```
